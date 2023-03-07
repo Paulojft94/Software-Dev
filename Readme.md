@@ -1,6 +1,6 @@
 # DESOFT I - Lab Classes Support Project
 
-Look at the documents folder for the documentation.
+Look at the docs folder for the documentation.
 
 # How to prepare the environment?
 
