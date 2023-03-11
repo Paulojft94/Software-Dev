@@ -153,11 +153,7 @@ export function saudacao(numSec: number): string {
 
   if (numSec >= limitTar1 && numSec < limitTar2) sauda = "Boa tarde";
 
-  if (
-    (numSec >= limitNoi1 && numSec <= eixoNoi) ||
-    (numSec >= 0 && numSec <= limitNoi2)
-  )
-    sauda = "Boa Noite";
+  if ((numSec >= limitNoi1 && numSec <= eixoNoi) || (numSec >= 0 && numSec <= limitNoi2)) sauda = "Boa Noite";
 
   return sauda;
 }
@@ -188,8 +184,7 @@ export function numSegregation(num: number): number[] {
 export function numListClassification(list: number[]): string {
   let classificacao: string = "a";
 
-  if (list[0] < list[1] && list[1] < list[2])
-    classificacao = "A sequência é crescente";
+  if (list[0] < list[1] && list[1] < list[2]) classificacao = "A sequência é crescente";
   else classificacao = "A sequência não é crescente";
 
   return classificacao;
@@ -209,4 +204,69 @@ export function discountedPreco(price: number): number {
   } else rebatido = price * 0.8;
 
   return rebatido;
+}
+
+//Exercício #13
+
+export function turmaClassificacao(num: number): string {
+  let resultado: string = "s2";
+
+  if (num < 0 || num > 1) {
+    resultado = "Valor Inválido";
+  } else if (num < 0.2) {
+    resultado = "Turma Má";
+  } else if (num < 0.5) {
+    resultado = "Turma Fraca";
+  } else if (num < 0.7) {
+    resultado = "Turma Razoável";
+  } else if (num < 0.9) {
+    resultado = "Turma Boa";
+  } else if (num <= 1) {
+    resultado = "Turma Excelente";
+  }
+
+  return resultado;
+}
+
+//Exercício #14
+
+export function empresaGrupo(num: number): string {
+  let anuncio: string = "a";
+
+  if (num >= 0 && num <= 0.3) {
+    anuncio = "Índice de poluícão aceitável";
+  } else if (num > 0.5) {
+    anuncio = "Todos os grupos estão suspensos";
+  } else if (num > 0.4) {
+    anuncio = "Os grupos 1 e 2 estão suspensos";
+  } else if (num > 0.3) {
+    anuncio = "O grupo 1 está suspenso";
+  }
+
+  return anuncio;
+}
+
+//Exercício #14
+
+export function tempoCalc(erva: number, arvores: number, arbustos: number): number {
+  let duracaoServico: number = 0;
+  let gramaDur: number = erva * 300;
+  let arvoresDur: number = arvores * 600;
+  let arbustosDur: number = arbustos * 400;
+
+  duracaoServico = gramaDur + arvoresDur + arbustosDur;
+
+  return duracaoServico;
+}
+
+export function precoCalc(erva: number, arvs: number, arbustos: number, maoObra: number): number {
+  let precoGrama: number = erva * 10;
+  let precoArvs: number = arvs * 20;
+  let precoArbustos: number = arbustos * 15;
+  let manPowerPrice: number = (maoObra / 3600) * 10;
+  let precoTotal: number;
+
+  precoTotal = precoGrama + precoArvs + precoArbustos + manPowerPrice;
+
+  return precoTotal;
 }
