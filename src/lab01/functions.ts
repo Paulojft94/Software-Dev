@@ -246,7 +246,7 @@ export function empresaGrupo(num: number): string {
   return anuncio;
 }
 
-//Exercício #14
+//Exercício #15
 
 export function tempoCalc(erva: number, arvores: number, arbustos: number): number {
   let duracaoServico: number = 0;
@@ -269,4 +269,12 @@ export function precoCalc(erva: number, arvs: number, arbustos: number, maoObra:
   precoTotal = precoGrama + precoArvs + precoArbustos + manPowerPrice;
 
   return precoTotal;
+}
+
+//Exercício #16
+
+export function mediaKM(num1: number, num2: number, num3: number, num4: number, num5: number): number {
+  let medDiariaKM: number = ((num1 + num2 + num3 + num4 + num5) / 5) * 1.609;
+
+  return medDiariaKM;
 }
