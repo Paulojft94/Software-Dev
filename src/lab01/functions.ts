@@ -278,3 +278,68 @@ export function mediaKM(num1: number, num2: number, num3: number, num4: number, 
 
   return medDiariaKM;
 }
+
+//Exercício #17
+
+export function numPintores(areaEdificio: number): number {
+  let pintoresAmount: number = 0;
+
+  if (areaEdificio > 0 && areaEdificio < 100) {
+    pintoresAmount = 1;
+  } else if (areaEdificio >= 100 && areaEdificio < 300) {
+    pintoresAmount = 2;
+  } else if (areaEdificio >= 300 && areaEdificio < 1000) {
+    pintoresAmount = 3;
+  } else if (areaEdificio >= 1000) {
+    pintoresAmount = 4;
+  } else pintoresAmount = -1;
+
+  return pintoresAmount;
+}
+
+export function custoTotal(edificioArea: number, numPintores: number, salarioHora: number): number {
+  let custoObra: number;
+
+  custoObra = (edificioArea / 2) * numPintores * salarioHora;
+
+  return custoObra;
+}
+
+export function custoMateriais(area: number, tinta: number, rendimentoTinta: number): number {
+  let precoTotalMaterial: number;
+
+  precoTotalMaterial = Math.ceil(area / rendimentoTinta) * tinta;
+
+  return precoTotalMaterial;
+}
+
+//Exercício #18
+
+export function horaChegada(partida: string, duracao: string): string {
+  let informacao: string = "";
+
+  let [h, m] = partida.split(":");
+  let [durH, durM] = duracao.split(":");
+
+  let hour: number = parseInt(h);
+  let minute: number = parseInt(m);
+  let hourDur: number = parseInt(durH);
+  let minuteDur: number = parseInt(durM);
+
+  let somaH: number = hour + hourDur;
+  let somaMin: number = minute + minuteDur;
+
+  if (somaMin > 60) {
+    somaH = somaH + 1;
+    somaMin = somaMin % 60;
+
+    if (somaH > 23) {
+      somaH = somaH % 24;
+      informacao = `O Comboio chega amanhã às ${somaH}:${somaMin}`;
+    }
+  } else informacao = `O Comboio chega hoje às ${somaH}:${somaMin}`;
+
+  return informacao;
+}
+
+//Exercício #19
