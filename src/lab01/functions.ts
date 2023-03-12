@@ -343,3 +343,38 @@ export function horaChegada(partida: string, duracao: string): string {
 }
 
 //Exercício #19
+
+export function somar(h: string, dur: number): string {
+  let horaFinal: string;
+
+  let [hora, minuto, segundo] = h.split(":");
+  let inicioSec = parseInt(hora) * 3600 + parseInt(minuto) * 60 + parseInt(segundo);
+  let somaSecs: number;
+  let horas: number, minutos: number, segundos: number;
+
+  somaSecs = inicioSec + dur;
+
+  horas = Math.floor(somaSecs / 3600) % 24;
+  minutos = Math.floor((somaSecs % 3600) / 60) % 60;
+  segundos = Math.floor(somaSecs % 60);
+
+  horaFinal = "O processamento desta tarefa termina às " + horas + ":" + minutos + ":" + segundos;
+
+  return horaFinal;
+}
+
+//Exercício #20
+
+export function horasExtra(num: number, precoHora: number): number {
+  let semanada: number = 0;
+
+  if (num > 36) {
+    let diferenca = num - 36;
+
+    if (diferenca <= 5) {
+      semanada = 36 * 7.5 + diferenca * 10;
+    } else semanada = 36 * 7.5 + 5 * 10 + (diferenca - 5) * 15;
+  } else semanada = num * precoHora;
+
+  return semanada;
+}
