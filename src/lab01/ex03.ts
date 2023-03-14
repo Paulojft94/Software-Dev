@@ -3,5 +3,4 @@
 
 import { pontos } from "./functions";
 
-console.log(pontos(200, 500, 100, 50000));
-
+console.log(pontos(1, 1, 1, 1));

@@ -38,9 +38,9 @@ export function pontos(x1: number, y1: number, x2: number, y2: number): number {
   let distPontos: number;
   let calc: number;
 
-  calc = (x2 - x1) ^ (2 + (y2 - y1)) ^ 2;
+  calc = (x2 - x1) ** 2 + (y2 - y1) ** 2;
 
-  distPontos = calc ^ 0.5;
+  distPontos = calc ** 0.5;
 
   return distPontos;
 }
