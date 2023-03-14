@@ -37,3 +37,44 @@ export function tempConv(tempInput: number): number {
 
   return fahrenheit;
 }
+
+/////Exercício7
+
+export function minConverter(h: number, m: number): number {
+  const minutosPast = h * 60 + m;
+
+  return minutosPast;
+}
+
+/////Exercício8
+
+export function trovoadaDist(del: number): number {
+  const distKM = (del * 340) / 1000;
+
+  return distKM;
+}
+
+/////Exercício9 (X)
+
+export function runDist(zeMins: number): number {
+  let kmPerMin: number;
+  let meanVel: number = 42.195 / (60 * (4 * 60)) + 2 * 60 + 10;
+
+  kmPerMin = meanVel * 60;
+  let zeDist = kmPerMin * zeMins;
+
+  return zeDist;
+}
+
+/////Exercício10
+
+export function alturaEd(queda: number): number {
+  const altura: number = 0 * queda + (9.8 * 2 ** 2) / 2;
+
+  return altura;
+}
+
+export function alturaEdi(sombraEd: number, altPessoa: number, sombraPessoa: number): number {
+  const alturaEdificio = (sombraEd / sombraPessoa) * altPessoa;
+  return alturaEdificio;
+}
