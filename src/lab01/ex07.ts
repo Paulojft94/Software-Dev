@@ -1,6 +1,6 @@
 import { cubeClassification, volumeCubo } from "./functions";
 
-let area: number = -11111;
+let area: number = 4;
 let volume: number;
 let tipo: string;
 

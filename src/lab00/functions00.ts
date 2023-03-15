@@ -10,7 +10,7 @@ export function florCalc(rSum: number, tSum: number, rPreco: number, tPreco: num
 export function vCilindro(r: number, a: number): number {
   const pi: number = 3.14;
 
-  let vCil = (pi * r) ** 2 * a;
+  let vCil = (pi * r) ** 2 * a * 1000;
 
   return vCil;
 }

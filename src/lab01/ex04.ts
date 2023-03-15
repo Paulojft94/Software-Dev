@@ -7,4 +7,4 @@ DIV: operador DIVISÃO INTEIRA – devolve o quociente inteiro (5 DIV 2 → 2)
 
 import { verNumber } from "./functions";
 
-console.log(verNumber(10000));
+console.log(verNumber(100));
